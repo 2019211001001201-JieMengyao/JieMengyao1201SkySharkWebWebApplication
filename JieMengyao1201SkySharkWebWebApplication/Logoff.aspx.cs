@@ -11,7 +11,7 @@ namespace JieMengyao1201SkySharkWebWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.RemoveAll();
         }
     }
 }

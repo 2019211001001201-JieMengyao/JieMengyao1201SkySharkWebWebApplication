@@ -56,7 +56,7 @@
                         <asp:TextBox ID="txtAddPassword" runat="server" TextMode="Password"></asp:TextBox></td>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnDelDelete" runat="server" Text="Delete" />
+                        <asp:Button ID="btnDelDelete" runat="server" Text="Delete" OnClick="btnDelDelete_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -82,7 +82,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnAddSubmit" runat="server" Text="Submit" />
+                        <asp:Button ID="btnAddSubmit" runat="server" Text="Submit" OnClick="btnAddSubmit_Click" />
                     </td>
                     <td></td>
                     <td></td>
