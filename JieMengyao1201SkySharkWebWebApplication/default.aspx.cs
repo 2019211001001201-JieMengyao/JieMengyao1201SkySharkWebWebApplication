@@ -56,13 +56,13 @@ namespace JieMengyao1201SkySharkWebWebApplication
                         switch (Role)
                         {
                             case "Admin":
-                                Response.Redirect(".\\NA\\ManageUser.aspx");
+                                Response.Redirect(".\\NA\\ManageUsers.aspx");
                                 break;
                             case "BM":
-                                Response.Redirect(".\\BM\\AddFI.aspx");
+                                Response.Redirect(".\\BM\\AddFl.aspx");
                                 break;
                             case "LOB":
-                                Response.Redirect(".\\LOB\\CreatRes.aspx");
+                                Response.Redirect(".\\LOB\\CreateRes.aspx");
                                 break;
                         }
                     }
