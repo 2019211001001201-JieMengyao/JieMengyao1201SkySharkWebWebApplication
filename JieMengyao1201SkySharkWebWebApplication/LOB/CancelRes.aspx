@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="CancelRes.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.CancelRes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     Business Executive
+    <style type="text/css">
+        .auto-style1 {
+            width: 208px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <form id="form1" runat="server">
@@ -29,14 +34,17 @@
                 </tr>
                  <tr>
                     <td></td>
-                    <td><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ChangePassword.aspx">Change password</asp:HyperLink></td>
+                    <td class="auto-style1"><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ChangePassword.aspx">Change password</asp:HyperLink></td>
                     <td><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
                   
                 </tr>
+                <tr><td colspan="3">
+                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                 <tr>
                                  <td>
                                      <asp:Label ID="Label2" runat="server" Text="Ticket No"></asp:Label></td>
-                                 <td>
+                                 <td class="auto-style1">
                                      <asp:TextBox ID="txtTNo" runat="server"></asp:TextBox></td>
                                  <td>
                                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please specify a valid ticket number" ControlToValidate="txtTNo"></asp:RequiredFieldValidator>
@@ -45,8 +53,8 @@
                              </tr>
                 <tr>
                                  <td></td>
-                                 <td>
-                                     <asp:Button ID="btnCancle" runat="server" Text="Cancle Ticket" /></td>
+                                 <td class="auto-style1">
+                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /></td>
                                  <td></td>
                                
                              </tr>

@@ -60,6 +60,15 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
 
         /// <summary>
+        /// lblMessage 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
         /// Label2 控件。
         /// </summary>
         /// <remarks>
@@ -87,12 +96,12 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// btnCancle 控件。
+        /// btnSubmit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancle;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

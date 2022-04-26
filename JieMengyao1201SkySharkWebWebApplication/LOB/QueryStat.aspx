@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="QueryStat.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.QueryStat" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     Business Executive
+    Business Executive
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
+     <form id="form1" runat="server">
         <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -35,7 +35,7 @@
                 </tr>
                
                 </table>
-             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
+             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="1">
                  <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                  <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                  <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -51,6 +51,9 @@
                                  <td></td>
                                  <td></td>
                              </tr>
+                             <tr><td colspan="2">
+                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="False" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label3" runat="server" Text="Flight Number"></asp:Label></td>
@@ -72,15 +75,15 @@
                                  <td>
                                      <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label></td>
                                  <td>
-                                     <asp:Calendar ID="calDepDate" runat="server"></asp:Calendar>
+                                     <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                                  </td>
                                  <td></td>
                              </tr>
                              <tr>
                                  <td></td>
-                                 <td></td>
+                                 <td><asp:Button ID="btnQueryStatus" runat="server" Text="Query Status" /></td>
                                  <td>
-                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" /></td>
+                                     </td>
                              </tr>
                          </table>
                      </asp:WizardStep>
@@ -100,7 +103,7 @@
                              </tr>
                              <tr>
                                  <td>
-                                     <asp:Label ID="Label7" runat="server" Text="Ticket No"></asp:Label></td>
+                                     <asp:Label ID="lblTicketStatus" runat="server" Text="Ticket No"></asp:Label></td>
                                  <td>
                                      <asp:TextBox ID="txtTNo" runat="server"></asp:TextBox></td>
                                  <td></td>
@@ -108,7 +111,7 @@
                              <tr>
                                  <td></td>
                                  <td>
-                                     <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" /></td>
+                                     <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" OnClick="btnTStatSubmit_Click" /></td>
                                  <td></td>
                              </tr>
                              

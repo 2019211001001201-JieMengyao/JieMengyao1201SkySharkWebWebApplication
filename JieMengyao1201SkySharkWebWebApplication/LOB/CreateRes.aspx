@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="CreateRes.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.CreateRes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     Business Executive
+    Business Executive
+    <style type="text/css">
+        .auto-style1 {
+            height: 22px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <form id="form1" runat="server">
-        <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px" >
+    <form id="form1" runat="server">
+        <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <DynamicMenuStyle BackColor="#F7F6F3" />
@@ -19,7 +24,7 @@
             <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
             <StaticSelectedStyle BackColor="#5D7B9D" />
         </asp:Menu>
-        <div class="tabContents">
+         <div class="tabContents">
             <table>
                 <tr>
                     <td colspan="2">
@@ -35,7 +40,7 @@
                 </tr>
                
                 </table>
-             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
+             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0" OnFinishButtonClick="Wizard1_FinishButtonClick" OnNextButtonClick="Wizard1_NextButtonClick">
                  <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                  <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                  <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -50,6 +55,9 @@
                                      <asp:Label ID="Label2" runat="server" Text="Step1:Specify Ticket Details" BorderStyle="None"></asp:Label></td>
                                  <td></td>
                              </tr>
+                             <tr><td colspan="3">
+                                  <asp:Label ID="lblMessageStep1" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label3" runat="server" Text="Flight Number"></asp:Label></td>
@@ -63,8 +71,8 @@
                                      <asp:Label ID="Label4" runat="server" Text="Class"></asp:Label></td>
                                  <td>
                                      <asp:ListBox ID="lstClass" runat="server">
-                                         <asp:ListItem>Executive</asp:ListItem>
-                                         <asp:ListItem>Business</asp:ListItem>
+                                         <asp:ListItem Value="Exec">Executive</asp:ListItem>
+                                         <asp:ListItem Value="Busi">Business</asp:ListItem>
                                      </asp:ListBox></td>
                                  <td></td>
                                  <td></td>
@@ -73,7 +81,7 @@
                                  <td>
                                      <asp:Label ID="Label5" runat="server" Text="Date"></asp:Label></td>
                                  <td>
-                                     <asp:Calendar ID="Cal1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
+                                     <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="Black" BorderStyle="Double" BorderWidth="2px" DayNameFormat="FirstTwoLetters"></asp:Calendar>
                                  </td>
                                  <td></td>
                                  <td></td>
@@ -139,7 +147,7 @@
                              </tr>
                          </table>
                      </asp:WizardStep>
-                     <asp:WizardStep runat="server" Title="Make Reservation">
+                     <asp:WizardStep ID="WizardStep3" runat="server" Title="Make Reservation">
                          <!-- 3 -->
                          <table>
                              <tr>
@@ -147,6 +155,9 @@
                                      <asp:Label ID="Label13" runat="server" Text="Step3:Confirm Booking"></asp:Label></td>
                                 
                              </tr>
+                              <tr><td colspan="3">
+                                  <asp:Label ID="lblMessageStep3" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
                              <tr>
                                  <td>
                                      <asp:Label ID="Label14" runat="server" Text="Name"></asp:Label></td>
@@ -164,17 +175,18 @@
                                  <td></td>
                              </tr>
                              <tr>
-                                 <td></td>
-                                 <td>
-                                     <asp:Button ID="btnCreate" runat="server" Text="Create" BackColor="Silver" BorderColor="Blue" Width="100px" /><asp:Button ID="btnCancle" runat="server" Text="Cancle" BackColor="Silver" BorderColor="Blue" Width="100px" /></td>
-                                 <td>
+                                 <td class="auto-style1"></td>
+                                 <td class="auto-style1">
                                      </td>
-                                 <td></td>
+                                 <td class="auto-style1">
+                                     </td>
+                                 <td class="auto-style1"></td>
                              </tr>
                          </table>
                      </asp:WizardStep>
                  </WizardSteps>
              </asp:Wizard>
                 </div>
-  </form>          
+        
+    </form>
 </asp:Content>

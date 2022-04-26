@@ -1,14 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ConfirmRes.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.ConfimRes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     Business Executive
-     <style type="text/css">
-         .auto-style1 {
-             width: 188px;
-         }
-     </style>
+    Business Executive
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form id="form1" runat="server">
+      <form id="form1" runat="server">
         <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
             <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
             <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -38,19 +33,25 @@
                     <td><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx">Logoff</asp:HyperLink></td>
                     <td></td>
                 </tr> 
+                <tr><td colspan="2">
+                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red">lblMessage</asp:Label>
+                                 </td></tr>
                 <tr>
                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Ticket No"></asp:Label></td>
                     <td>
                         <asp:TextBox ID="txtTNo" runat="server"></asp:TextBox></td>
-                    <td>                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please specify a valid ticket number" ControlToValidate="txtTNo"></asp:RequiredFieldValidator></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" Text="Submit" /></td>
+                        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" /></td>
                     <td></td>
                 </tr>
+                <tr><td colspan="2">
+                                  <asp:Label ID="lblDetails" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td></tr>
             </table>
              </div>
           </form>
