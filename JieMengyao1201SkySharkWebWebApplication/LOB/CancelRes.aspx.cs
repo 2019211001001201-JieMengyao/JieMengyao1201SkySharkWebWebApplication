@@ -29,7 +29,7 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             cmd.Parameters.AddWithValue("@TicketNo", txtTNo.Text.Trim());
             DataSet ticketNodataSet = new DataSet();
-            adapter.Fill(ticketNodataSet, "TicketDetails");
+            adapter.Fill(ticketNodataSet,"TicketDetails");
             conn.Close();
 
             if (ticketNodataSet.Tables["TicketDetails"].Rows.Count == 0)

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace JieMengyao1201SkySharkWebWebApplication.LOB
 {
@@ -25,20 +22,17 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
             SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
             string selectSql = "SELECT TicketNo, FltNo, DateOfJourney, ClassOfRes, TicketConfirmed, DateOfRes, Fare FROM dtReservations " +
-                "where TicketNo=@TicketNo";
-
+                "where TicketNo = @TicketNo";
             SqlCommand cmd = new SqlCommand(selectSql, conn);
             cmd.Parameters.AddWithValue("@TicketNo", txtTNo.Text.Trim());
-
-
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
             DataSet dataSet = new DataSet();
             adapter.Fill(dataSet, "TicketDetails");
+
             conn.Close();
             if (dataSet.Tables["TicketDetails"].Rows.Count == 0)
             {
-               lblMessage.Text = "Invalid Ticket Number";
+                lblMessage.Text = "Invalid Ticket Number";
                 return;
             }
             else
@@ -47,7 +41,7 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
                 DateofFlight = dataSet.Tables["TicketDetails"].Rows[0][2].ToString();
                 if (Convert.ToDateTime(DateofFlight) < Convert.ToDateTime(DateTime.Today.ToShortDateString()))
                 {
-                    lblMessage.Text = "The flight has already departed";
+                    lblMessage.Text = "The flight has aLready departed";
                     return;
                 }
                 else
@@ -59,15 +53,13 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
                     updatecmd.Parameters.AddWithValue("@TicketNo", txtTNo.Text.Trim());
                     updatecmd.ExecuteNonQuery();
                     conn.Close();
-                    lblDetails.Text = "”Ticket confirmed\n" + " FltNo :" + dataSet.Tables["TicketDetails"].Rows[0][1].ToString() + "\n DateOfJourney: "
+
+                    lblDetails.Text = "Ticket confirmed\n" + "FltNo:" + dataSet.Tables["TicketDetails"].Rows[0][1].ToString() + "\n DateOfJourney:"
                         + dataSet.Tables["TicketDetails"].Rows[0][2].ToString() + "" +
                         "\n ClassOfRes: " + dataSet.Tables["TicketDetails"].Rows[0][3].ToString();
                     lblDetails.Visible = true;
-
-
                 }
-
             }
-        }//end
+        }
     }
 }

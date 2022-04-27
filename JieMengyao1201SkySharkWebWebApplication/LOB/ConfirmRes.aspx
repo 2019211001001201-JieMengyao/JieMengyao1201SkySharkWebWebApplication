@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ConfirmRes.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.ConfimRes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="ConfirmRes.aspx.cs" Inherits="JieMengyao1201SkySharkWebWebApplication.LOB.ConfirmRes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    Business Executive
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <form id="form1" runat="server">
@@ -34,7 +33,7 @@
                     <td></td>
                 </tr> 
                 <tr><td colspan="2">
-                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red">lblMessage</asp:Label>
+                                  <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
                                  </td></tr>
                 <tr>
                     <td>

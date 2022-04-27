@@ -73,7 +73,7 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
                         }
                         else
                         {
-                            lblMessage.Text = "Status: Overbooked";
+                            lblMessage.Text = "Status:Overbooked";
                         }
                     }
                 }

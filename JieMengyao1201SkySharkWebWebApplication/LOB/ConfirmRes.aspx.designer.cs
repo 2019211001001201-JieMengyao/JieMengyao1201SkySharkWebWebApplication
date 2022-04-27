@@ -11,7 +11,7 @@ namespace JieMengyao1201SkySharkWebWebApplication.LOB
 {
 
 
-    public partial class ConfimRes
+    public partial class ConfirmRes
     {
 
         /// <summary>
